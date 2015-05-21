@@ -3,5 +3,6 @@
 
     <string name="app_name">LevelReader</string>
     <string name="hello_world">Hello world!</string>
+    <string name="read_count">READ:</string>
 
 </resources>
