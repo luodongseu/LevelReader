@@ -1,6 +1,6 @@
 package com.dts.app.levelreader.utils;
 
-import com.dts.app.levelreader.application.UserApplcation;
+import com.dts.app.levelreader.application.UserApplication;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -14,7 +14,7 @@ import android.content.res.Resources;
 public class PixelUtil {
 
 	/** initialize the context **/
-	private static Context mContext = UserApplcation.getInstance();
+	private static Context mContext = UserApplication.getInstance();
 
 	/**
 	 * dp2px.

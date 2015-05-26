@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 import com.dts.app.levelreader.R;
 import com.dts.app.levelreader.entity.Article;
+
 /**
  * ListView Adapter for articles
  * 
@@ -21,7 +22,7 @@ public class ListArticleAdapter extends BaseAdapter {
 	/** adapter need a context for view **/
 	private Context mContext;
 	/** item data **/
-	private List<Article> articles ;
+	private List<Article> articles;
 
 	/**
 	 * Constructor
@@ -36,9 +37,9 @@ public class ListArticleAdapter extends BaseAdapter {
 
 	@Override
 	public int getCount() {
-		if(articles!=null)
+		if (articles != null)
 			return articles.size();
-		else{
+		else {
 			return 0;
 		}
 	}
@@ -53,35 +54,40 @@ public class ListArticleAdapter extends BaseAdapter {
 		return 0;
 	}
 
-	@SuppressLint("InflateParams") 
+	@SuppressLint("InflateParams")
 	@Override
 	public View getView(int arg0, View convertView, ViewGroup arg2) {
-		/**get view**/
+		/** get view **/
 		ViewHolder viewHolder = null;
 		if (convertView == null) {
-			convertView = LayoutInflater.from(mContext).inflate(R.layout.item_article, null);
+			convertView = LayoutInflater.from(mContext).inflate(
+					R.layout.item_article, null);
 			viewHolder = new ViewHolder();
-			viewHolder.title = (TextView) convertView.findViewById(R.id.art_title);
-			viewHolder.readCount = (TextView) convertView.findViewById(R.id.art_readcount);
+			viewHolder.title = (TextView) convertView
+					.findViewById(R.id.art_title);
+			viewHolder.chinese = (TextView) convertView
+					.findViewById(R.id.art_title_in_chinese);
 			convertView.setTag(viewHolder);
 		} else {
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
-		/**set view data**/
+		/** set view data **/
 		viewHolder.title.setText(articles.get(arg0).getTitle());
-		viewHolder.readCount.setText("0");
-		
+		/** set view data **/
+		viewHolder.chinese.setText(articles.get(arg0).getChinese());
+
 		return convertView;
 	}
-	
+
 	/***
 	 * A view holder for getView
+	 * 
 	 * @author Administrator
-	 *
+	 * 
 	 */
-	static class ViewHolder{
+	static class ViewHolder {
 		public TextView title;
-		public TextView readCount;
+		public TextView chinese;
 	}
 
 }

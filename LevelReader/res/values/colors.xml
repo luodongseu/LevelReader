@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="slider_text">#f5f5f5</color>
+    <color name="slider_text">#99CCCC</color>
     <color name="transparent">#00000000</color>
-    <color name="article_title">#fff</color>
-    <color name="article_content">#cfcfcf</color>
+    <color name="article_title">#000</color>
+    <color name="article_content">#333333</color>
     <color name="bg_read_activity">#000</color>
     <color name="bg_list_title">#1f1</color>
     <color name="bg_list_read">#3ce</color>
-    
+    <color name="text_color">#fff</color>
+
 </resources>

@@ -3,48 +3,68 @@
     xmlns:atext="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_read_activity"
     android:orientation="vertical"
+    android:background="#FFFFCC"
     tools:context="${relativePackage}.${activityClass}" >
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-        <LinearLayout
+        <include layout="@layout/topbar" />
+
+        <ScrollView
             android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingTop="5dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/art_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+                    android:text="sss"
+                    android:textColor="@color/article_title"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:typeface="normal" />
+
+                <TextView
+                    android:id="@+id/art_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="30dp"
+                    android:text="ssss"
+                    android:textColor="@color/article_content"
+                    android:textSize="16sp"
+                    android:typeface="normal" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_view_words"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/art_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:paddingBottom="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="30dp"
-                android:paddingTop="5dp"
-                android:textColor="@color/article_title"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:typeface="normal" />
-
-            <TextView
-                android:id="@+id/art_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingBottom="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="30dp"
-                android:paddingTop="5dp"
-                android:textColor="@color/article_content"
-                android:typeface="normal" />
-        </LinearLayout>
-    </ScrollView>
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_background"
+            android:text="查看词汇" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/slider_dialog"
@@ -52,10 +72,12 @@
         android:layout_height="80.0dip"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
+        android:background="@drawable/slider_text_red"
         android:gravity="center"
         android:padding="5dip"
+        android:textColorHint="@color/article_title"
         android:textSize="35.0dip"
-        android:visibility="invisible" />
+        android:visibility="gone" />
 
     <com.dts.app.levelreader.view.SliderView
         android:id="@+id/slider_bar"

@@ -116,19 +116,25 @@ public class SliderView extends View {
 		case MotionEvent.ACTION_UP:
 			invalidate();
 			if (mTextDialog != null) {
+				try {
+					/** let thread sleep 0.2s ***/
+					Thread.sleep(200);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 				mTextDialog.setVisibility(View.INVISIBLE);
 			}
 			break;
 		default:
 			if (oldChoose != mChoice) {
 				if (mChoice >= 0 && mChoice < slid.length) {
-					if (sliderChangedListener != null) {
-						sliderChangedListener
-								.onSliderChangedListener(slid[mChoice]);
-					}
 					if (mTextDialog != null) {
 						mTextDialog.setText(slid[mChoice]);
 						mTextDialog.setVisibility(View.VISIBLE);
+					}
+					if (sliderChangedListener != null) {
+						sliderChangedListener
+								.onSliderChangedListener(slid[mChoice]);
 					}
 					slider_choice = mChoice;
 					/** refresh view **/
