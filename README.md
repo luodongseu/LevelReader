@@ -1,4 +1,4 @@
-# LevelReader
+﻿# LevelReader
 An app for readers learning English words by levels
 
 #App要求
@@ -21,3 +21,7 @@ alien                1
 文本内容是Compared with the alien, our technology is backward。
 如果slide-bar为2， 那么只高亮级别在2及以下的词，包括backward, technology,
 alien；如果slide-bar为3，那么高亮级别小于等于3的词。
+
+
+# 说明
+目前完成了文章列表界面、文章阅读界面、分级高亮单词、生词列表界面等功能。但部分功能尚有缺陷。未完待续。
