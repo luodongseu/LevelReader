@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="slider_text">#ff99cccc</color>
+    <color name="transparent">#00000000</color>
+    <color name="article_title">#ff000000</color>
+    <color name="article_content">#ff333333</color>
+    <color name="bg_read_activity">#ff000000</color>
+    <color name="bg_list_title">#ff11ff11</color>
+    <color name="bg_list_read">#ff33ccee</color>
+    <color name="text_color">#111000</color>
+     <color name="bar_text_color">#ffffff</color>
+      <color name="bar_bg_color">#ff009966</color>
+    
+    <color name="li_background">#FFFFCC</color>
+</resources>

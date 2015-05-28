@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="AText" format="string" />
+    <attr name="ATextColor" format="color" />
+    <attr name="ATextSize" format="dimension" />
+</resources>
